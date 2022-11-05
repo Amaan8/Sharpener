@@ -11,3 +11,8 @@ list[2].style.backgroundColor = 'green';
 for (let i = 0; i < list.length; i++) {
     list[i].style.fontWeight = 'bold';
 }
+
+// list[4].style.listStyle = 'none';
+
+let tag = document.getElementsByTagName('li');
+tag[4].style.listStyle = 'none';
