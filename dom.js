@@ -4,3 +4,10 @@ header.style.borderBottom = 'solid 3px #000';
 let items = document.getElementById('add');
 items.style.fontWeight = 'bold';
 items.style.color = 'green';
+
+let list = document.getElementsByClassName('list-group-item');
+list[2].style.backgroundColor = 'green';
+
+for (let i = 0; i < list.length; i++) {
+    list[i].style.fontWeight = 'bold';
+}
