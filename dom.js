@@ -17,16 +17,39 @@
 // let tag = document.getElementsByTagName('li');
 // tag[4].style.listStyle = 'none';
 
-let secondItem = document.querySelector('li:nth-child(2)');
-secondItem.style.backgroundColor = 'green';
+// let secondItem = document.querySelector('li:nth-child(2)');
+// secondItem.style.backgroundColor = 'green';
 
-let thirdItem = document.querySelector('li:nth-child(3)');
-thirdItem.style.visibility = 'hidden';
+// let thirdItem = document.querySelector('li:nth-child(3)');
+// thirdItem.style.visibility = 'hidden';
 
-let listItems = document.querySelectorAll('li');
-listItems[1].style.color = 'green';
+// let listItems = document.querySelectorAll('li');
+// listItems[1].style.color = 'green';
 
-let odd = document.querySelectorAll('li:nth-child(odd)');
-for (let i = 0; i < odd.length; i++) {
-    odd[i].style.backgroundColor = 'green';
-}
+// let odd = document.querySelectorAll('li:nth-child(odd)');
+// for (let i = 0; i < odd.length; i++) {
+//     odd[i].style.backgroundColor = 'green';
+// }
+
+let items = document.querySelector('#items');
+let item = document.querySelector('li:nth-child(2)');
+
+items.parentElement.style.backgroundColor = '#f4f4f4';
+items.children[2].style.backgroundColor = 'green';
+items.firstElementChild.style.color = 'green';
+items.lastElementChild.textContent = 'Last';
+
+item.nextElementSibling.style.color = 'yellow';
+item.previousElementSibling.textContent = 'First';
+
+let newDiv = document.createElement('div');
+newDiv.setAttribute('title', 'hello');
+
+let newDivText = document.createTextNode('Hello World');
+newDiv.appendChild(newDivText);
+
+let container = document.querySelector('header .container');
+let h1 = document.querySelector('h1');
+container.insertBefore(newDiv, h1);
+
+items.insertBefore(newDiv, items.firstElementChild);
